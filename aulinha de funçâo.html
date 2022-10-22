@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+        p{
+            background-color: aqua;
+        }
+        .p{
+            background-color: red;
+        }
+        #p{
+            background-color: yellow;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+
+        /*
+        isso é para o usuário digitar informaçôes
+        let nome = window.prompt("digite seu nome");
+
+        var cpf = window.prompt("digite seu cpf");
+
+        const tel = window.prompt("digite seu telefone");
+
+        //alert(`Seu nome é ${nome}, seu cpf é ${cpf} e seu telefone é ${tel} `);
+        //alert("Seu nome é "+nome+", seu cpf é "+cpf+ "e seu telefone é " +tel);
+
+        document.write(`Seu nome é ${nome} , seu cpf é ${cpf} e seu telefone é ${tel}`);
+        */
+
+        $(document).ready(function(){
+            $("#btne").click(function(){
+                $("p").hide();
+                $("#btne").hide();
+                $("#btnm").show();
+            });
+            $("#btnm").click(function(){
+                $("p").show();
+                $("#btnm").hide();
+                $("#btne").show();
+            });
+            $("#nao").click(function(){
+                $("#eu").show();
+            });
+        });
+
+        $(document).ready(function(){
+            $("img").hide();
+        });
+    </script>
+</head>
+<body>
+    <button id="btnm">Mostrar</button>
+    <button id="btne">Esconder</button>
+    <p>
+        Texto
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga non tempore, dicta ipsum quasi, accusantium nulla iure animi magnam quas temporibus possimus qui! Nihil accusantium nostrum rem aspernatur reiciendis fuga?
+
+    </p>
+    <p class="p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi tenetur maxime ducimus, debitis suscipit quam sed error nostrum sint laudantium ex explicabo quasi deleniti minus, laborum sit perferendis maiores. Ipsum.
+
+    </p>
+    <p id="p">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa ea expedita voluptatibus laboriosam iste itaque, facere facilis non vel neque, ipsum officia perferendis quam dolorum dicta voluptas quibusdam id deserunt?
+    </p>
+    <!--<label for="btl">Bom dia</label> 
+    <input id="btl" type="date">
+    -->
+    <button id="nao">Nâo aperte</button>
+    <div>
+        <img id="eu" src="https://media.tenor.com/X8HRdbC6IG0AAAAd/perdemo-maradona.gif" alt="">
+    </div>
+</body>
+</html>
